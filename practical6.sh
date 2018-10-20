@@ -2,22 +2,19 @@ a=$1
 b=$2
 echo "1: add\n2: subtract\n3: divide\n4: multiply"
 read op
-if [ $op == 1 ]
+if [ $op -eq 1 ]
 then
-	echo `echo $a + $b | bc`
-fi
+	echo "$a+$b" | bc
 
-if [ $op == 2 ]
+elif [ $op -eq 2 ]
 then
-	echo `echo $a - $b | bc`
-fi
+	echo "$a - $b" | bc
 
-if [ $op == 3 ]
+elif [ $op -eq 3 ]
 then
-	echo `echo $a / $b | bc -l`
-fi
+	echo "$a / $b" | bc -l
 
-if [ $op == 4 ]
+elif [ $op -eq 4 ]
 then
-	echo `echo $a \* $b | bc -l`
+	echo "$a * $b" | bc -l
 fi
