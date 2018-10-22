@@ -1,8 +1,7 @@
 #Arithematic operations
 
-echo "Enter your 2 integers"
-
-read num1 num2
+num1=$1
+num2=$2
 
 echo $(( num1 + num2 ))
 echo $(( num1 - num2 ))
